@@ -1,2 +1,2 @@
-INSERT INTO games (game_id, name) VALUES ('0', 'Uncharted Waters: New Horizons');
-INSERT INTO consoles (console_id, name) VALUES ('0', 'Sega Mega Drive')
+INSERT INTO games (game_id, name, photo_url) VALUES ('0', 'Uncharted Waters: New Horizons', 'https://upload.wikimedia.org/wikipedia/ru/2/24/New_Horizons_-_Sega_-_%D0%BF%D0%BE%D1%81%D1%82%D0%B5%D1%80.jpg');
+INSERT INTO consoles (console_id, name, photo_url) VALUES ('0', 'Sega Mega Drive', 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sega-Genesis-Mk2-6button.jpg/2880px-Sega-Genesis-Mk2-6button.jpg')

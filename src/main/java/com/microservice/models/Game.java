@@ -14,7 +14,7 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @Getter
 @Entity
-@Table(name="games")
+@Table(name = "games")
 public class Game {
 
     private static long idCounter = 0;
@@ -29,9 +29,12 @@ public class Game {
     }
 
     @Id
-    @Column(name="game_id")
+    @Column(name = "game_id")
     private long id;
 
     private String name;
+
+    @Column(name = "photo_url")
+    private String photoUrl;
 
 }

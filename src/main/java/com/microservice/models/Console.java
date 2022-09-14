@@ -18,9 +18,23 @@ import javax.persistence.Table;
 @Table(name="consoles")
 public class Console {
 
+    private static long idCounter = 0;
+
+    public Console(String name) {
+        this.name = name;
+        setId();
+    }
+
+    public synchronized void setId() {
+        this.id = ++idCounter;
+    }
+
     @Id
     @Column(name="console_id")
     private long id;
 
     private String name;
+
+    @Column(name = "photo_url")
+    private String photoUrl;
 }
