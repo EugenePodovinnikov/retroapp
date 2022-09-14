@@ -2,14 +2,26 @@ package com.microservice.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Component
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
+@Entity
+@Table(name="games")
 public class Game {
 
-    private String title;
+    @Id
+    @Column(name="game_id")
+    private long gameId;
 
-    @Autowired
-    private Console console;
+    private String name;
+
 }
