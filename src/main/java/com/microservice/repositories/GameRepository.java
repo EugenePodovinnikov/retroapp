@@ -19,4 +19,8 @@ public interface GameRepository extends CrudRepository<Game, Long> {
     @Override
     @NonNull
     Optional<Game> findById(@NonNull Long id);
+
+    @Override
+    @NonNull
+    <S extends Game> Iterable<S> saveAll(@NonNull Iterable<S> games);
 }

@@ -6,6 +6,8 @@ import com.microservice.repositories.GameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.io.Console;
+import java.util.Collection;
 import java.util.List;
 
 import static com.microservice.resources.Constants.Messages.GAME_NOT_FOUND;
@@ -22,5 +24,9 @@ public class GameService {
 
     public List<Game> getAll() {
         return gameRepository.findAll();
+    }
+
+    public void addToDatabase(Collection<Game> games) {
+        gameRepository.saveAll(games);
     }
 }

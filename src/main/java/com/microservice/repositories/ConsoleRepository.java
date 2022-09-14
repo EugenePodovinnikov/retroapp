@@ -18,4 +18,9 @@ public interface ConsoleRepository extends CrudRepository<Console, Long> {
     @Override
     @NonNull
     Optional<Console> findById(@NonNull Long id);
+
+    @Override
+    @NonNull
+    <S extends Console> Iterable<S> saveAll(@NonNull Iterable<S> consoles);
+
 }

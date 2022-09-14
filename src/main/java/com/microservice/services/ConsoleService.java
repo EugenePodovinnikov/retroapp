@@ -2,10 +2,12 @@ package com.microservice.services;
 
 import com.microservice.exceptions.ConsoleNotFoundException;
 import com.microservice.models.Console;
+import com.microservice.models.Game;
 import com.microservice.repositories.ConsoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Collection;
 import java.util.List;
 
 import static com.microservice.resources.Constants.Messages.CONSOLE_NOT_FOUND;
@@ -22,5 +24,9 @@ public class ConsoleService {
 
     public List<Console> getAll() {
         return consoleRepository.findAll();
+    }
+
+    public void addToDatabase(Collection<Console> consoles) {
+        consoleRepository.saveAll(consoles);
     }
 }
