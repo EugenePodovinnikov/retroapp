@@ -37,4 +37,6 @@ public class Game {
     @Column(name = "photo_url")
     private String photoUrl;
 
+    private String description;
+
 }

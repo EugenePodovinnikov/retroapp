@@ -2,6 +2,7 @@ package com.microservice.controllers;
 
 import com.microservice.models.Game;
 import com.microservice.services.ConsoleService;
+import com.microservice.services.EbayCrawlerService;
 import com.microservice.services.GameService;
 import com.microservice.services.ManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,8 @@ public class DebugController {
     private ConsoleService consoleService;
     @Autowired
     private GameService gameService;
+    @Autowired
+    private EbayCrawlerService ebayCrawlerService;
 
     @GetMapping("/debug!")
     public void run() {

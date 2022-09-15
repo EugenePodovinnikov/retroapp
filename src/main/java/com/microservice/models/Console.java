@@ -5,10 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Component
 @AllArgsConstructor
@@ -37,4 +35,11 @@ public class Console {
 
     @Column(name = "photo_url")
     private String photoUrl;
+
+    private String description;
+
+    private String sold;
+
+    @Column(name = "best_games")
+    private String bestGameIds;
 }
